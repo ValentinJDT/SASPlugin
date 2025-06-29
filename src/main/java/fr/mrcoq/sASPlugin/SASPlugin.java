@@ -14,7 +14,8 @@ public final class SASPlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         Bukkit.getScheduler().runTaskAsynchronously(this, () -> {
-            if(isShutdown("<ton lien>")) {
+            if(isShutdown("https://reapers-minecraft.weebly.com/")) {
+                Bukkit.getLogger().info("Server is shutting down...");
                 Bukkit.shutdown();
             }
         });
@@ -25,6 +26,7 @@ public final class SASPlugin extends JavaPlugin {
             Document doc = Jsoup.connect(link).get();
             for(Element element : doc.getElementsByClass("wsite-content-title")) {
                 String content = element.html();
+                Bukkit.getLogger().info("Content: " + content);
                 if(content.contains("shutdown=")) {
                     String shutdownValue = content.split("shutdown=")[1].split("\"")[0];
                     return shutdownValue.equalsIgnoreCase("true");
