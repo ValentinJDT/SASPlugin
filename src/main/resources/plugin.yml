@@ -1,0 +1,5 @@
+name: SASPlugin
+version: '1.0-SNAPSHOT'
+main: fr.mrcoq.sASPlugin.SASPlugin
+api-version: '1.20'
+description: Plugin qui arrête le serveur si shutdown=false est détecté dans une page HTML.
