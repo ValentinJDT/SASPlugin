@@ -9,7 +9,7 @@ import org.jsoup.nodes.Element;
 import java.io.IOException;
 import java.util.logging.Level;
 
-public final class SASPlugin extends JavaPlugin {
+public final class ShutdownAtStartPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
